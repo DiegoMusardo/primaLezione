@@ -1,0 +1,28 @@
+<ul>
+    <li *ngFor="
+        let x of ['matteo','marco','luca','giovanni'];
+        let i = index;
+        let primo = first;
+        let ultimo = last;
+        let dispari = odd;
+        let pari = even;
+    ">
+        Il mio nome è
+        {{ x }}
+        ------&gt; {{ i }}
+        {{ primo }}
+        {{ ultimo }}
+        {{ dispari }}
+        {{ pari }}
+    </li>
+</ul>
+<button (click)="mostra = 1">Imposta a 1</button>
+<button (click)="mostra = 2">Imposta a 2</button>
+<div [ngSwitch]="mostra">
+    <div *ngSwitchCase="1">Mostra vale 1</div>
+    <div *ngSwitchCase="2">Mostra vale 2</div>
+    <div *ngSwitchCase="3">Mostra vale 3</div>
+    <div *ngSwitchDefault>Mostra ha un altro valore</div>
+</div>
+
+<img [src]="the_image">
